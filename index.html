@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI生活教练 - 个人成长助手</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- 添加Google字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- 添加Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部区域 -->
+        <header>
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <h1>AI生活教练</h1>
+            </div>
+            <p class="tagline">与AI对话，获取个人成长建议</p>
+        </header>
+
+        <!-- 主要内容区域 -->
+        <main>
+            <!-- 聊天区域 -->
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- 欢迎消息 -->
+                    <div class="message ai-message">
+                        <div class="message-content">
+                            <p>你好！我是你的AI生活教练。我可以帮助你解决生活中的困惑，提供个人成长建议，或者只是聊聊天。请告诉我你今天想聊些什么？</p>
+                        </div>
+                    </div>
+                    <!-- 消息将通过JavaScript动态添加 -->
+                </div>
+                
+                <!-- 输入区域 -->
+                <div class="chat-input">
+                    <textarea id="user-input" placeholder="输入你的问题或想法..." rows="2"></textarea>
+                    <button id="send-btn" title="发送消息">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- 底部区域 -->
+        <footer>
+            <p>基于DeepSeek R1 API开发 | <a href="#" id="clear-chat">清除对话</a></p>
+        </footer>
+    </div>
+
+    <!-- 加载中指示器 -->
+    <div class="loading-indicator" id="loading-indicator">
+        <div class="spinner"></div>
+        <p>AI思考中...</p>
+    </div>
+
+    <!-- JavaScript文件 -->
+    <script src="scripts.js"></script>
+</body>
+</html>
