@@ -76,8 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 temperature: 0.6  // 设置温度参数
             };
 
+            // 确定API端点路径
+            // 在Vercel部署环境中使用相对路径，在本地开发环境中也可以使用相同路径
+            const apiEndpoint = '/api';
+
             // 发送请求到我们的代理服务器
-            const response = await fetch('/api', {
+            const response = await fetch(apiEndpoint, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
